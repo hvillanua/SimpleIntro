@@ -3,7 +3,7 @@
   <ul class="hidden md:flex">
     {{ range .Site.Menus.main }}
     <li>
-      <a href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ .URL | absURL }}">{{ .Name }}</a>
     </li>
     {{end}}
   </ul>
